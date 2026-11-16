@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYNTRO — Современная DAW</title>
+    
+    <!-- Иконка для вкладки браузера (фавиконка) -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Подключаем шрифт Space Grotesk для геометрического стиля -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Space Grotesk', sans-serif;
+            border-radius: 0px; /* Острые углы как у Ableton */
+        }
+
+        body {
+            background-color: #09080C;
+            color: #FFFFFF;
+            overflow-x: hidden;
+        }
+
+        /* Навигация (Шапка) */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 60px; 
+            border-bottom: 1px solid #1F1B2E;
+        }
+
+        /* Логотип в шапке */
+        .logo { 
+            display: flex; 
+            align-items: center; 
+        }
+
+        .logo img {
+            height: 90px; /* Размер логотипа в шапке */
+            width: auto;  
+        }
+
+        .nav-links a {
+            color: #8E8C99;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 16px;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: #FFFFFF; }
+
+        /* Главный экран */
+        .hero {
+            display: flex;
+            min-height: 85vh;
+            align-items: center;
+            padding: 0 60px;
+            background: linear-gradient(90deg, #09080C 50%, #15121E 50%);
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 700px;
+            padding-right: 40px;
+        }
+
+        .hero h1 {
+            font-size: 80px;
+            line-height: 0.95;
+            font-weight: 700;
+            margin-bottom: 30px;
+            letter-spacing: -2px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #8E8C99;
+            margin-bottom: 50px;
+            max-width: 500px;
+            line-height: 1.4;
+        }
+
+        /* Кнопка скачивания */
+        .btn-primary {
+            display: inline-block;
+            background-color: #7B48FF;
+            color: #FFFFFF;
+            padding: 20px 40px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: #9366FF;
+        }
+
+        /* Блок с маскотом справа */
+        .hero-image {
+            flex: 1;
+            height: 80vh;
+            background-color: #15121E;
+            background-image: url('mascot.png'); 
+            background-size: cover; /* Растягиваем на весь блок */
+            background-position: center; 
+            background-repeat: no-repeat; 
+            border-left: 1px solid #1F1B2E;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="splash.png" alt="SYNTRO Logo">
+        </div>
+        
+        <div class="nav-links">
+            <a href="#">Функции</a>
+            <a href="#">Скачать</a>
+            <a href="#">Поддержка</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>СОЗДАВАЙ МУЗЫКУ БЕЗ ГРАНИЦ</h1>
+            <p>Легковесная и мощная цифровая звуковая станция с поддержкой VST3, MIDI и чистым звучанием.</p>
+            
+            <!-- Кнопка скачивания архива с программой -->
+            <a href="SYNTRO_v1.0.zip" class="btn-primary" download>Скачать для Windows</a>
+            <div style="margin-top: 15px; font-size: 14px; color: #5A5866;">
+                Windows 10/11 • 64-bit • Бесплатно
+            </div>
+        </div>
+        
+        <div class="hero-image"></div>
+    </div>
+
+</body>
+</html>
